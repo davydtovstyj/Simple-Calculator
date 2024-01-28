@@ -5,10 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Simple_Calculator"
         mc:Ignorable="d"
-        Height="800" Width="450"
+        Height="600" Width="350"
         AllowsTransparency="True"
-        WindowStyle="None">
-    <Grid>
-
-    </Grid>
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent">
+    <Border Background="#252525"
+            CornerRadius="20">
+        <Grid>
+            
+        </Grid>
+    </Border>
 </Window>
