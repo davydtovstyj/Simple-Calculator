@@ -9,4 +9,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Rectangle 1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Rectangle 1.png" />
+  </ItemGroup>
+
 </Project>

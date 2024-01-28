@@ -17,5 +17,20 @@ namespace Simple_Calculator
         {
             InitializeComponent();
         }
+
+        private void Cross_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }
