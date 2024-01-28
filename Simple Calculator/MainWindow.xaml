@@ -13,7 +13,10 @@
     <Border Background="#252525"
             CornerRadius="20">
         <Grid>
-            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
         </Grid>
     </Border>
 </Window>
