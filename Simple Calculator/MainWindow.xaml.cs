@@ -32,5 +32,15 @@ namespace Simple_Calculator
         {
             this.DragMove();
         }
+
+        private void FieldText_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Clipboard.SetText(FieldText.Text);
+        }
+
+        private void FieldText_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            SecondText.Content = "Copied!";
+        }
     }
 }

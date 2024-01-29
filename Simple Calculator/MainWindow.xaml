@@ -139,7 +139,7 @@
             <!--Text-->
             <TextBox x:Name="FieldText" Focusable="False" BorderThickness="2" HorizontalAlignment="Center" Height="65" Margin="0,27,0,0" Grid.Row="1" 
                      TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="350" Cursor="IBeam" Background="Transparent" BorderBrush="#FFABADB3" 
-                     Foreground="White" FontSize="48" FontFamily="Calibri" TextAlignment="Right" IsReadOnly="True"/>
+                     Foreground="White" FontSize="48" FontFamily="Calibri" TextAlignment="Right" IsReadOnly="True" MouseDown="FieldText_MouseDown" MouseUp="FieldText_MouseUp"/>
             <Label x:Name="SecondText" Content="" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="350" Foreground="White" 
                    HorizontalContentAlignment="Right"/>
             
