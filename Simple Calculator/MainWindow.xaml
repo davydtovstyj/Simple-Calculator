@@ -9,7 +9,7 @@
         AllowsTransparency="True"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="Transparent" MouseDown="Window_MouseDown">
+        Background="Transparent">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -129,10 +129,11 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Image HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="350" Source="/Rectangle 1.png" Stretch="Fill"/>
+            <!--Window-->
+            <Image HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="350" Source="/Rectangle 1.png" Stretch="Fill" MouseDown="WindowDrag"/>
             <Button Style="{DynamicResource CrossButtonStyle}" Content="×" HorizontalAlignment="Left" Height="42" Margin="305,-12,0,0" VerticalAlignment="Top" Width="45" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="34" RenderTransformOrigin="0.5,0.729" Click="Cross_Click"/>
             <Button Style="{DynamicResource MinimizeButtonStyle}" Content="_" HorizontalAlignment="Left" Height="72" Margin="259,-42,0,0" VerticalAlignment="Top" Width="46" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="40" RenderTransformOrigin="0.5,0.729" Click="Minimize_Click"/>
-            <Label Content="Calculator" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="18" Margin="0,-2,0,0"/>
+            <Label Content="Calculator" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="22" Margin="0,-6,0,0"/>
 
         </Grid>
     </Border>

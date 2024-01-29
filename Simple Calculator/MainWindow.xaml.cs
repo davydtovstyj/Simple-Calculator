@@ -28,7 +28,7 @@ namespace Simple_Calculator
             this.WindowState = WindowState.Minimized;
         }
 
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        private void WindowDrag(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
         }
