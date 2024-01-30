@@ -121,6 +121,50 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <SolidColorBrush x:Key="TextBox.Static.Border" Color="#0000"/>
+        <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF37373A"/>
+        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#0000"/>
+        <Style x:Key="FieldTextStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
 
     <Border Background="#252525">
@@ -135,11 +179,12 @@
                     Background="Transparent" BorderThickness="0" Foreground="White" FontSize="34" RenderTransformOrigin="0.5,0.729" Click="Cross_Click"/>
             <Button Style="{DynamicResource MinimizeButtonStyle}" Content="_" HorizontalAlignment="Left" Height="72" Margin="259,-42,0,0" VerticalAlignment="Top" 
                     Width="46" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="40" RenderTransformOrigin="0.5,0.729" Click="Minimize_Click"/>
-            <Label Content="Calculator" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="22" Margin="0,-6,0,0"/>
+            <Label x:Name="NameL" Content="Calculator" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="22" Margin="0,-6,0,0" MouseDown="WindowDrag"/>
             <!--Text-->
-            <TextBox x:Name="FieldText" Focusable="False" BorderThickness="2" HorizontalAlignment="Center" Height="65" Margin="0,27,0,0" Grid.Row="1" 
-                     TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="350" Cursor="IBeam" Background="Transparent" BorderBrush="#FFABADB3" 
-                     Foreground="White" FontSize="48" FontFamily="Calibri" TextAlignment="Right" IsReadOnly="True" MouseDown="FieldText_MouseDown" MouseUp="FieldText_MouseUp"/>
+            <TextBox Style="{DynamicResource FieldTextStyle}" x:Name="FieldText" Focusable="False" BorderThickness="3" HorizontalAlignment="Center" Height="67" Margin="0,27,0,0" Grid.Row="1" 
+                     TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="350" Cursor="Hand" Background="Transparent" BorderBrush="#FF303033" 
+                     Foreground="White" FontSize="48" FontFamily="Calibri" TextAlignment="Right" IsReadOnly="True" MouseDown="FieldText_MouseDown" MouseUp="FieldText_MouseUp" 
+                     SelectionBrush="#000078D7"/>
             <Label x:Name="SecondText" Content="" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="350" Foreground="White" 
                    HorizontalContentAlignment="Right"/>
             

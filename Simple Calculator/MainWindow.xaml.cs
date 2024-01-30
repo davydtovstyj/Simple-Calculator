@@ -16,6 +16,9 @@ namespace Simple_Calculator
         public MainWindow()
         {
             InitializeComponent();
+#if DEBUG
+            NameL.Content += "(dbg)";
+#endif
         }
 
         private void Cross_Click(object sender, RoutedEventArgs e)
