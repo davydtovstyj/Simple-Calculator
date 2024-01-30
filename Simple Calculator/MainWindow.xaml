@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Simple_Calculator"
         mc:Ignorable="d"
-        Height="600" Width="350"
+        Height="650" Width="350"
         AllowsTransparency="True"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -171,23 +171,75 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
-                <RowDefinition/>
+                <RowDefinition Height="125"/>
+                <RowDefinition Height="495"/>
             </Grid.RowDefinitions>
             <!--Window-->
-            <Image HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="350" Source="/Rectangle 1.png" Stretch="Fill" MouseDown="WindowDrag"/>
-            <Button Style="{DynamicResource CrossButtonStyle}" Content="×" HorizontalAlignment="Left" Height="42" Margin="305,-12,0,0" VerticalAlignment="Top" Width="45" 
+            <Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="350" Source="/Rectangle 1.png" Stretch="Fill" MouseDown="WindowDrag"/>
+            <Button Style="{DynamicResource CrossButtonStyle}" Content="×" HorizontalAlignment="Left" Height="43" Margin="305,-13,0,0" VerticalAlignment="Top" Width="45" 
                     Background="Transparent" BorderThickness="0" Foreground="White" FontSize="34" RenderTransformOrigin="0.5,0.729" Click="Cross_Click"/>
             <Button Style="{DynamicResource MinimizeButtonStyle}" Content="_" HorizontalAlignment="Left" Height="72" Margin="259,-42,0,0" VerticalAlignment="Top" 
                     Width="46" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="40" RenderTransformOrigin="0.5,0.729" Click="Minimize_Click"/>
-            <Label x:Name="NameL" Content="Calculator" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="22" Margin="0,-6,0,0" MouseDown="WindowDrag"/>
+            <Label x:Name="NameL" Content="Calculator" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="22" Margin="5,-6,0,0" MouseDown="WindowDrag" Height="36" Width="107"/>
             <!--Text-->
-            <TextBox Style="{DynamicResource FieldTextStyle}" x:Name="FieldText" Focusable="False" BorderThickness="3" HorizontalAlignment="Center" Height="67" Margin="0,27,0,0" Grid.Row="1" 
-                     TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="350" Cursor="Hand" Background="Transparent" BorderBrush="#FF303033" 
+            <TextBox Style="{DynamicResource FieldTextStyle}" x:Name="FieldText" Focusable="False" BorderThickness="3" HorizontalAlignment="Center" Height="68" Grid.Row="1" 
+                     TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Width="350" Cursor="Hand" Background="Transparent" BorderBrush="#FF303033" 
                      Foreground="White" FontSize="48" FontFamily="Calibri" TextAlignment="Right" IsReadOnly="True" MouseDown="FieldText_MouseDown" MouseUp="FieldText_MouseUp" 
                      SelectionBrush="#000078D7"/>
             <Label x:Name="SecondText" Content="" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="350" Foreground="White" 
                    HorizontalContentAlignment="Right"/>
-            
+            <!--Buttons-->
+            <!--Actions-->
+            <Button Content="+/-" HorizontalAlignment="Left" Height="75" Margin="17,405,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="." HorizontalAlignment="Left" Height="75" Margin="177,405,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="=" HorizontalAlignment="Left" Height="75" Margin="256,405,0,0" Grid.Row="2" VerticalAlignment="Top" Width="76" Background="#FF0089B7" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="+" HorizontalAlignment="Left" Height="75" Margin="257,325,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="-" HorizontalAlignment="Left" Height="75" Margin="257,245,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="×" HorizontalAlignment="Left" Height="75" Margin="257,165,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="÷" HorizontalAlignment="Left" Height="75" Margin="257,85,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="⌫" HorizontalAlignment="Left" Height="75" Margin="257,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="C" HorizontalAlignment="Left" Height="74" Margin="177,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="CE" HorizontalAlignment="Left" Height="75" Margin="97,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="%" HorizontalAlignment="Left" Height="75" Margin="17,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="√" HorizontalAlignment="Left" Height="74" Margin="177,86,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="^" HorizontalAlignment="Left" Height="75" Margin="97,86,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="!" HorizontalAlignment="Left" Height="75" Margin="17,86,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <!--Digits-->
+            <Button Content="0" HorizontalAlignment="Left" Height="75" Margin="97,405,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="1" HorizontalAlignment="Left" Height="75" Margin="17,325,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="2" HorizontalAlignment="Left" Height="75" Margin="97,325,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="3" HorizontalAlignment="Left" Height="75" Margin="177,325,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="4" HorizontalAlignment="Left" Height="75" Margin="17,245,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="5" HorizontalAlignment="Left" Height="75" Margin="97,245,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="6" HorizontalAlignment="Left" Height="75" Margin="177,245,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="7" HorizontalAlignment="Left" Height="75" Margin="17,165,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="8" HorizontalAlignment="Left" Height="75" Margin="97,165,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Content="9" HorizontalAlignment="Left" Height="75" Margin="177,165,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
+                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+
         </Grid>
     </Border>
 </Window>
