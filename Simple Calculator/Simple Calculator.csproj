@@ -11,10 +11,12 @@
 
   <ItemGroup>
     <None Remove="Rectangle 1.png" />
+    <None Remove="Rectangle.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Rectangle 1.png" />
+    <Resource Include="Rectangle.png" />
   </ItemGroup>
 
 </Project>
