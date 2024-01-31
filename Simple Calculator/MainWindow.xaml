@@ -201,38 +201,39 @@
                     Width="76" Background="#FF0089B7" BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" 
                     HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="+" HorizontalAlignment="Left" Height="75" Margin="257,325,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="+" HorizontalAlignment="Left" Height="75" Margin="257,325,0,0" Grid.Row="2" VerticalAlignment="Top" 
+                    Width="75" Background="#FF333333" BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" 
+                    HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="-" HorizontalAlignment="Left" Height="75" Margin="257,245,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="-" HorizontalAlignment="Left" Height="75" Margin="257,245,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="×" HorizontalAlignment="Left" Height="75" Margin="257,165,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="×" HorizontalAlignment="Left" Height="75" Margin="257,165,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="÷" HorizontalAlignment="Left" Height="75" Margin="257,85,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="÷" HorizontalAlignment="Left" Height="75" Margin="257,85,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="⌫" HorizontalAlignment="Left" Height="75" Margin="257,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="⌫" HorizontalAlignment="Left" Height="75" Margin="257,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="C" HorizontalAlignment="Left" Height="74" Margin="177,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="C" HorizontalAlignment="Left" Height="74" Margin="177,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="CE" HorizontalAlignment="Left" Height="75" Margin="97,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="CE" HorizontalAlignment="Left" Height="75" Margin="97,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="%" HorizontalAlignment="Left" Height="75" Margin="17,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="%" HorizontalAlignment="Left" Height="75" Margin="17,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="√" HorizontalAlignment="Left" Height="74" Margin="177,86,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="√" HorizontalAlignment="Left" Height="74" Margin="177,86,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="^" HorizontalAlignment="Left" Height="75" Margin="97,86,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="^" HorizontalAlignment="Left" Height="75" Margin="97,86,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
 
-            <Button Content="!" HorizontalAlignment="Left" Height="75" Margin="17,86,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
-                BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
+            <Button Style="{DynamicResource ActionButtonStyle}" Content="!" HorizontalAlignment="Left" Height="75" Margin="17,86,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF333333" 
+                    BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
             <!--Digits-->
             <Button Style="{DynamicResource DigitButtonStyle}" Content="0" HorizontalAlignment="Left" Height="75" Margin="97,405,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF3E3E3E" 
                 BorderBrush="#00707070" Foreground="White" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Calibri"/>
