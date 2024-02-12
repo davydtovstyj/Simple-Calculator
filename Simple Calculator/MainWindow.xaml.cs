@@ -1,13 +1,6 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Simple_Calculator
 {
@@ -16,9 +9,6 @@ namespace Simple_Calculator
         public MainWindow()
         {
             InitializeComponent();
-#if DEBUG
-            NameL.Content += "(dbg)";
-#endif
         }
 
         private void Cross_Click(object sender, RoutedEventArgs e)
