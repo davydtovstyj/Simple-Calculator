@@ -7,11 +7,16 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\icons8-calculator-50.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Rectangle 1.png" />
     <None Remove="Rectangle.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\icons8-calculator-50.ico" />
   </ItemGroup>
 
   <ItemGroup>
